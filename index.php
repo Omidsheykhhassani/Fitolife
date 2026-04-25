@@ -6,6 +6,7 @@
   <title>Fitolife</title>
 </head>
 <body>
+  <h1 class="bg-gray-500"></h1>
   <!-- Navbar -->
   <nav></nav>
   <!-- Hero header -->

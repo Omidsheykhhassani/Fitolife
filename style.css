@@ -3,3 +3,7 @@ Theme Name: Fitolife
 Author: Fito
 Version: 0.0.0
 */
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
