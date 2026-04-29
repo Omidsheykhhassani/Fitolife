@@ -8,7 +8,7 @@
   <title>Fitolife</title>
 </head>
 
-<body>
+<body class="bg-blacks-900">
   <!-- Navbar -->
   <nav class="fixed flex justify-center items-center p-4 z-1 w-full">
     <div class="flex justify-between items-center w-full max-w-7xl rounded-full py-4 px-16 backdrop-blur-xs bg-white/5 border border-white/20 shadow-lg">

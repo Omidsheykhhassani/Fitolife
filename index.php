@@ -11,7 +11,25 @@
   </div>
 </header>
 <!-- Features -->
-<section></section>
+<section class="flex justify-center items-center py-25 px-4">
+  <ul class="flex justify-around w-full max-w-7xl">
+    <li class="feature-item">
+      <img src="<?php echo get_template_directory_uri() ?>/assets/images/growchart-icon.png" alt="star logo" class="w-40">
+      <h3>مسائل توسعه فردی</h3>
+      <p>قراره براتون کلی از مسائل توسعه فردی مثل روش های برنامه ریزی و غیره رو توضیح بدم</p>
+    </li>
+    <li class="feature-item lg:mt-24">
+      <img src="<?php echo get_template_directory_uri() ?>/assets/images/book-icon.png" alt="star logo" class="w-40">
+      <h3>معرفی کتاب</h3>
+      <p>قراره که کلی کتاب خوب تو زمینه های مختلف مثل روانشناسی بهتون معرفی کنم</p>
+    </li>
+    <li class="feature-item lg:mt-48">
+      <img src="<?php echo get_template_directory_uri() ?>/assets/images/star-icon.png" alt="star logo" class="w-40">
+      <h3>و خیلی چیزهای دیگه</h3>
+      <p>کلا سعی میکنم هر سوژه جالبی پیدا کردم براتون بنویسم.</p>
+    </li>
+  </ul>
+</section>
 <!-- Latest posts section -->
 <section></section>
 <!-- Latest post -->
