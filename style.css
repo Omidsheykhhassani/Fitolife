@@ -56,7 +56,9 @@ Version: 0.0.0
   h5,
   h6,
   p,
-  span {
+  span,
+  a,
+  img {
     color: var(--color-whites-500);
   }
 
