@@ -6,34 +6,80 @@ Version: 0.0.0
 
 @import "tailwindcss";
 
+@font-face {
+  font-family: "Gandom";
+  src: url("/assets/fonts/Gandom.woff") format("woff");
+}
+
+@font-face {
+  font-family: "Vazir";
+  src: url("/assets/fonts/Vazir-FD-WOL.woff2") format("woff2");
+}
+
 @theme {
-  --color-primary-100: #A5BEDF;
-  --color-primary-300: #5484C2;
-  --color-primary-500: #044AA5;
+  --color-primary-100: #a5bedf;
+  --color-primary-300: #5484c2;
+  --color-primary-500: #044aa5;
   --color-primary-700: #033270;
-  --color-primary-900: #011B3B;
+  --color-primary-900: #011b3b;
 
-  --color-blacks-100: #B1B2B3;
-  --color-blacks-300: #6B6D70;
-  --color-blacks-500: #25282D;
-  --color-blacks-700: #191B1F;
-  --color-blacks-900: #0D0E10;
+  --color-blacks-100: #b1b2b3;
+  --color-blacks-300: #6b6d70;
+  --color-blacks-500: #25282d;
+  --color-blacks-700: #191b1f;
+  --color-blacks-900: #0d0e10;
 
-  --color-whites-100: #F5F6F7;
-  --color-whites-300: #ECEDEF;
-  --color-whites-500: #E3E5E8;
-  --color-whites-700: #9A9C9E;
+  --color-whites-100: #f5f6f7;
+  --color-whites-300: #ecedef;
+  --color-whites-500: #e3e5e8;
+  --color-whites-700: #9a9c9e;
   --color-whites-900: #525254;
 
-  --color-warning-100: #FFEEA4;
-  --color-warning-300: #FFE053;
-  --color-warning-500: #FFD102;
-  --color-warning-700: #AD8E01;
-  --color-warning-900: #5C4B01;
+  --color-warning-100: #ffeea4;
+  --color-warning-300: #ffe053;
+  --color-warning-500: #ffd102;
+  --color-warning-700: #ad8e01;
+  --color-warning-900: #5c4b01;
 
-  -color-error-100: #FFB6B6;
-  -color-error-300: #FF7474;
-  -color-error-500: #FF3333;
-  -color-error-700: #AD2323;
-  -color-error-900: #5C1212;
+  --color-error-100: #ffb6b6;
+  --color-error-300: #ff7474;
+  --color-error-500: #ff3333;
+  --color-error-700: #ad2323;
+  --color-error-900: #5c1212;
+}
+
+@layer base {
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6,
+  p,
+  span {
+    color: var(--color-whites-500);
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    font-family: "Gandom", Arial, Helvetica, sans-serif;
+  }
+
+  h1,
+  h2,
+  h3 {
+    font-weight: bold;
+  }
+
+  p, span, a {
+    font-family: "Vazir", Arial, Helvetica, sans-serif;
+  }
+
+  h2 {
+    font-size: var(--text-4xl);
+  }
 }

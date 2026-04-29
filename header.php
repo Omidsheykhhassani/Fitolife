@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fa" dir="rtl">
 
 <head>
   <meta charset="UTF-8">
@@ -9,6 +9,5 @@
 </head>
 
 <body>
-  <h1 class="bg-gray-500">hello world</h1>
   <!-- Navbar -->
   <nav></nav>
