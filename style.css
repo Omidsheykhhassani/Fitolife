@@ -4,6 +4,36 @@ Author: Fito
 Version: 0.0.0
 */
 
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import "tailwindcss";
+
+@theme {
+  --color-primary-100: #A5BEDF;
+  --color-primary-300: #5484C2;
+  --color-primary-500: #044AA5;
+  --color-primary-700: #033270;
+  --color-primary-900: #011B3B;
+
+  --color-blacks-100: #B1B2B3;
+  --color-blacks-300: #6B6D70;
+  --color-blacks-500: #25282D;
+  --color-blacks-700: #191B1F;
+  --color-blacks-900: #0D0E10;
+
+  --color-whites-100: #F5F6F7;
+  --color-whites-300: #ECEDEF;
+  --color-whites-500: #E3E5E8;
+  --color-whites-700: #9A9C9E;
+  --color-whites-900: #525254;
+
+  --color-warning-100: #FFEEA4;
+  --color-warning-300: #FFE053;
+  --color-warning-500: #FFD102;
+  --color-warning-700: #AD8E01;
+  --color-warning-900: #5C4B01;
+
+  -color-error-100: #FFB6B6;
+  -color-error-300: #FF7474;
+  -color-error-500: #FF3333;
+  -color-error-700: #AD2323;
+  -color-error-900: #5C1212;
+}
