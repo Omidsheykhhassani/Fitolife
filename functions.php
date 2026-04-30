@@ -8,9 +8,16 @@ function fitolife_enqueue_styles()
     array(),
   );
 }
+
+function mytheme_excerpt_length($length)
+{
+  return 120;
+}
+
 add_action('wp_enqueue_scripts', 'fitolife_enqueue_styles');
 
 add_filter('show_admin_bar', '__return_false');
+add_filter('excerpt_length', 'mytheme_excerpt_length');
 
 add_theme_support('post-thumbnails');
 

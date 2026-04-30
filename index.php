@@ -75,6 +75,50 @@
   </div>
 </section>
 <!-- Latest post -->
-<section></section>
+<section class="py-25 px-4 bg-primary-900 flex justify-center items-center">
+  <?php
+  $args = [
+    'posts_per_page' => 1,
+    'post_status'    => 'publish',
+  ];
+
+  $query = new WP_Query($args);
+
+  if ($query->have_posts()) :
+
+    while ($query->have_posts()) :
+      $query->the_post();
+
+      $img = get_the_post_thumbnail_url(get_the_ID(), 'full');
+      if (empty($img)) {
+        $img = get_template_directory_uri() . "/assets/images/Image placeholder.png";
+      }
+
+      $excerpt = get_the_excerpt();
+      $excerpt = wp_trim_words(get_the_excerpt(), 120, '...');
+
+  ?>
+      <div class="flex lg:flex-row flex-col max-w-7xl gap-4">
+        <div class="w-full max-w-1/2">
+          <img src="<?php echo $img ?>" alt="">
+        </div>
+        <div class="flex flex-col text-right justify-between w-1/2">
+          <div>
+            <h3 style="font-size: xx-large;"><?php echo get_the_title() ?></h3>
+            <p><?php echo $excerpt ?></p>
+          </div>
+          <a href="<?php echo get_the_permalink() ?>" class="text-2xl text-primary-100">مشاهده پست...</a>
+        </div>
+      </div>
+  <?php
+
+    endwhile;
+
+    wp_reset_postdata();
+  else :
+    echo '<p class="text-whites-500 w-full text-center py-8">هیچ پستی یافت نشد.</p>';
+  endif;
+  ?>
+</section>
 <!-- Footer -->
 <?php get_footer(); ?>

@@ -81,6 +81,10 @@ Version: 0.0.0
     font-family: "Vazir", Arial, Helvetica, sans-serif;
   }
 
+  p {
+    font-size: var(--text-lg);
+  }
+
   h2 {
     font-size: var(--text-4xl);
   }
