@@ -31,7 +31,7 @@ function primary_button(string $text, string $href)
 function post_card(string $img, string $alt, string $link, string $excerpt, string $title)
 {
 ?>
-  <li class="flex flex-col w-full rounded-lg bg-blacks-700 overflow-hidden">
+  <li class="flex flex-col rounded-lg bg-blacks-700 overflow-hidden">
     <div class="w-full">
       <img src="<?php echo $img ?>" alt="<?php echo $alt ?>" class="w-full h-auto">
     </div>
@@ -43,5 +43,12 @@ function post_card(string $img, string $alt, string $link, string $excerpt, stri
       <a href="<?php echo $link ?>" class="mt-4 text-2xl text-primary-300">مشاهده پست...</a>
     </div>
   </li>
+<?php
+}
+
+function social_link(string $name, string $href)
+{
+?>
+  <li class="flex flex-row-reverse gap-2"><img src="<?php echo get_template_directory_uri() ?>/assets/images/<?php echo $name; ?>-icon.png" alt="<?php echo $name ?> logo" class="w-6 h-6"><a href="<?php echo $href; ?>"><?php echo $name ?></a></li>
 <?php
 }

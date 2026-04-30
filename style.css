@@ -58,7 +58,9 @@ Version: 0.0.0
   p,
   span,
   a,
-  img {
+  img,
+  button,
+  input {
     color: var(--color-whites-500);
   }
 
@@ -77,12 +79,16 @@ Version: 0.0.0
     font-weight: bold;
   }
 
-  p, span, a {
+  p, span, a, button, input {
     font-family: "Vazir", Arial, Helvetica, sans-serif;
   }
 
-  p {
+  p, input, button {
     font-size: var(--text-lg);
+  }
+
+  h1 {
+    display: none;
   }
 
   h2 {
@@ -102,4 +108,16 @@ Version: 0.0.0
   gap: 1rem;
   max-width: 200px;
   height: auto;
+}
+
+.next, .prev {
+  @apply mx-2
+}
+
+.current {
+  @apply text-primary-300
+}
+
+.page-numbers {
+  @apply text-xl
 }
