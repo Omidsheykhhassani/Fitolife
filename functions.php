@@ -21,17 +21,20 @@ function primary_button(string $text, string $href)
 <?php
 }
 
-function post_card(string $img, string $alt , string $link, string $excerpt, string $title) {
-  ?>
-    <li class="flex flex-col w-full">
-      <div class="w-full">
-        <img src="<?php echo $img ?>" alt="<?php echo $alt ?>" class="w-full h-auto">
-      </div>
-      <div class="p-4">
+function post_card(string $img, string $alt, string $link, string $excerpt, string $title)
+{
+?>
+  <li class="flex flex-col w-full rounded-lg bg-blacks-700 overflow-hidden">
+    <div class="w-full">
+      <img src="<?php echo $img ?>" alt="<?php echo $alt ?>" class="w-full h-auto">
+    </div>
+    <div class="flex flex-col justify-between h-60 text-right p-4">
+      <div>
         <h3><?php echo $title ?></h3>
-        <p><?php echo $excerpt ?></p>
-        <a href="<?php echo $link ?>">مشاهده پست...</a>
+        <p class="mt-2"><?php echo $excerpt ?></p>
       </div>
-    </li>
-  <?php
+      <a href="<?php echo $link ?>" class="mt-4 text-2xl text-primary-300">مشاهده پست...</a>
+    </div>
+  </li>
+<?php
 }

@@ -59,6 +59,7 @@
           }
           $link = get_permalink();
           $excerpt = get_the_excerpt();
+          $excerpt = wp_trim_words(get_the_excerpt(), 25, '...');
           $title = get_the_title();
 
           post_card($img, $alt, $link, $excerpt, $title);
