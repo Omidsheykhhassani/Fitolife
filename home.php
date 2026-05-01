@@ -1,5 +1,5 @@
 <?php get_header() ?>
-<main class="flex justify-center pt-32">
+<main class="flex justify-center pt-32 px-2">
   <div class="w-full max-w-7xl">
     <h1>آرشیو مقالات</h1>
     <h2 class="text-center">موضوعی که بهش علاقه داری رو جستجو کن...</h2>
