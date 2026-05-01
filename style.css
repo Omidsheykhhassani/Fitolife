@@ -79,12 +79,13 @@ Version: 0.0.0
     font-weight: bold;
   }
 
-  p, span, a, button, input {
+  p, span, a, button, input, textarea {
     font-family: "Vazir", Arial, Helvetica, sans-serif;
   }
 
-  p, input, button {
+  p, input, button, label, textarea {
     font-size: var(--text-lg);
+    @apply leading-8
   }
 
   h1 {
@@ -120,4 +121,16 @@ Version: 0.0.0
 
 .page-numbers {
   @apply text-xl
+}
+
+.post-content a {
+  color: var(--color-primary-300) !important;
+}
+
+.post-content img {
+  @apply w-full h-auto
+}
+
+.comment-reply-link {
+  @apply text-primary-300 hover:text-primary-500
 }
