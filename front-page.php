@@ -1,8 +1,8 @@
 <?php get_header(); ?>
 <!-- Hero header -->
 <header class="relative w-full h-screen">
-  <img src="<?php echo get_template_directory_uri(); ?>/assets/images/hero-image.jpg" alt="hero image" class="absolute w-full h-full -z-1">
-  <div class="absolute w-full h-full bg-black/60 flex justify-center items-center">
+  <img src="<?php echo get_template_directory_uri(); ?>/assets/images/hero-image.jpg" alt="hero image" class="absolute w-full h-full -z-1 object-cover">
+  <div class="absolute w-full h-full bg-black/60 flex justify-center items-center px-2 text-center">
     <div class="w-full h-full flex flex-col justify-center items-center gap-4">
       <h1>فیتولایف وبلاگ زندگی شخصی</h1>
       <h2 class="">من رو در سفر زندگیم همراهی کن</h2>
@@ -13,7 +13,7 @@
 </header>
 <!-- Features -->
 <section class="flex justify-center items-center py-25 px-4 bg-primary-900">
-  <ul class="flex justify-around w-full max-w-7xl">
+  <ul class="flex md:flex-row flex-col md:justify-around md:items-start items-center md:gap-0 gap-8 w-full max-w-7xl">
     <li class="feature-item">
       <img src="<?php echo get_template_directory_uri() ?>/assets/images/growchart-icon.png" alt="growchart icon" class="w-40">
       <h3>مسائل توسعه فردی</h3>
@@ -60,7 +60,7 @@
           }
           $link = get_permalink();
           $excerpt = get_the_excerpt();
-          $excerpt = wp_trim_words(get_the_excerpt(), 25, '...');
+          $excerpt = wp_trim_words(get_the_excerpt(), 10, '...');
           $title = get_the_title();
 
           post_card($img, $alt, $link, $excerpt, $title);
@@ -98,14 +98,20 @@
       $excerpt = get_the_excerpt();
       $excerpt = wp_trim_words(get_the_excerpt(), 120, '...');
 
+      $thumbnail_id = get_post_thumbnail_id(get_the_ID());
+      $alt = get_post_meta($thumbnail_id, '_wp_attachment_image_alt', true);
+      if (empty($alt)) {
+        $alt = get_the_title(); // fallback
+      }
+
   ?>
-      <div class="flex lg:flex-row flex-col max-w-7xl gap-4">
-        <div class="w-full max-w-1/2">
-          <img src="<?php echo $img ?>" alt="">
+      <div class="flex lg:flex-row flex-col justify-center xl:items-stretch items-center max-w-7xl gap-4">
+        <div class="w-full lg:max-w-1/2 max-w-none">
+          <img src="<?php echo $img ?>" alt="<?php ?>">
         </div>
-        <div class="flex flex-col text-right justify-between w-1/2">
+        <div class="flex flex-col lg:text-right text-center justify-between lg:w-1/2 w-full lg:gap-0 gap-4">
           <div>
-            <h3 style="font-size: xx-large;"><?php echo get_the_title() ?></h3>
+            <h3 style="font-size: xx-large;" class="lg:mb-0 mb-4"><?php echo get_the_title() ?></h3>
             <p><?php echo $excerpt ?></p>
           </div>
           <a href="<?php echo get_the_permalink() ?>" class="text-2xl text-primary-100">مشاهده پست...</a>

@@ -4,8 +4,8 @@
     <h1>آرشیو مقالات</h1>
     <h2 class="text-center">موضوعی که بهش علاقه داری رو جستجو کن...</h2>
     <form class="flex gap-4 my-8 mx-4" role="search" method="get" action="<?php echo home_url('/'); ?>">
-      <input type="search" name="s" id="search" placeholder="جستجوی مقاله..." class="border-4 border-whites-500 rounded-lg py-2 px-4 w-full">
-      <button class="bg-primary-500 rounded-lg py-2 px-4 cursor-pointer">جستجو</button>
+      <input type="search" name="s" id="search" placeholder="جستجوی مقاله..." class="border border-whites-900 rounded-lg py-2 px-4 w-full focus:outline-none focus:ring-0 focus:border-whites-900 focus:shadow-none">
+      <button class=" bg-primary-500 rounded-lg py-2 px-4 cursor-pointer">جستجو</button>
     </form>
     <ul class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 bg-blacks-500 py-4 px-8 mt-4 rounded-lg w-full max-w-7xl">
       <?php
